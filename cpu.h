@@ -42,11 +42,16 @@ typedef struct
 {
 	byte sp;
 	byte p_flag;
-	byte ip;
+	word ip;
 	byte acc;
 	byte x;
 	byte y;
 	cpu_mem[CPUMEM_SIZE];
 }CPU
+
+void init_6502();
+void reset_6502();
+void VBlank(); /*The VBlank interrupts can be enabled/disabled by writing 1/0 into 7th bit of $2000. */
+void maskable_int();/*I don't how it works :(*/
 
 #endif

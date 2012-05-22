@@ -84,7 +84,7 @@ int readnes(char* nesfile)
 			printf("\n");
 			j=0;
 		}
-		printf("%c ",readbuf[i]);
+		printf("%x ",readbuf[i]);
 		j++;
 	}
 	printf("\n");
